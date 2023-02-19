@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+:root{
+/*Patela de cores alternativa*/
+    --cor-primaria: #2E4C6D;
+    --cor-secundaria: #DADDFC;
+    --cor-destaque: #FC997C;
+    --cor-hover-btn: #396EB0;
+
+    --font-primaria: 'krona One', sans-serif;
+    --font-secundaria: 'Montserrat', sans-serif;
+
+/*Paleta de cores do projeto original*/
+    /* --cor-primaria: #000;
+    --cor-secundaria: #f6f6f6;
+    --cor-destaque: #22d4fd;
+    --cor-hover-btn: #272727; */
+}
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    box-sizing:border-box;
+    background-color:var(--cor-primaria);
+    color:var(--cor-secundaria);
+}
+.cabecalho{
+    padding:3% 0 0 10%;
+}
+.cabecalho__menu{
+    display:flex;
+    gap:80px;
+}
+.cabecalho__menu__link{
+    font-family: var(--font-secundaria);
+    color:var(--cor-destaque);
+    font-size: 1.5rem;
+    font-weight:600;
+    text-decoration:none;
+}
+.cabecalho__menu__link:hover{
+    text-shadow:var(--cor-secundaria) 0px 0px 30px;
+}
+.apresentacao{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:6% 10%;
+    gap: 5rem;
+}
+.apresentacao__conteudo{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+.apresentacao__conteudo__titulo{
+    font-size:2.25rem;
+    font-family:var(--font-primaria);
+    line-height:56px;
+    font-weight:400;
+}
+.titulo-destaque{
+    color:var(--cor-destaque);
+}
+.apresentacao__conteudo__texto{
+    font-size:1.5rem;
+    font-family:var(--font-secundaria);
+    font-weight:400;
+    line-height:36px;
+}
+.apresentacao__links{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-direction:column;
+    gap:32px;
+}
+.apresentacao__links__subtitulo, .apresentacao__conteudo__subtitulo{
+    font-family:var(--font-primaria);
+    font-weight:400;
+    font-size:1.5rem;
+}
+.apresentacao__links__navegacao{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    text-decoration:none;
+    padding:16px 0;
+    border:2px solid var(--cor-destaque);
+    border-radius:8px;
+    width:50%;
+    font-family:var(--font-secundaria);
+    font-weight:600;
+    font-size:1.5rem;
+    color:var(--cor-secundaria);
+}
+.apresentacao__links__navegacao:hover{
+    background-color:var(--cor-hover-btn);
+    gap:32px;
+    transform: rotate(3deg);
+}
+.apresentacao__imagem{
+    width:50%;
+}
+.rodape{
+    background-color:var(--cor-destaque);
+    text-align:center;
+    color:var(--cor-primaria);
+    padding:24px;
+    font-family:var(--font-secundaria);
+    font-weight:400;
+    font-size:1.5rem;
+}
+
+/*estilo de conteúdo que não pertence ao projeto das aulas*/
+aside{
+    margin-top: 80px;
+    background-color:var(--cor-secundaria);
+    color:var(--cor-primaria);
+}
+aside h1{
+    text-transform:uppercase;
+    margin:10px 0;
+}
+
+@media (max-width: 1200px){
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+    .apresentacao__conteudo{
+        width:auto;
+    }
+    .cabecalho{
+        padding: 10% 0 4% 0;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+}
